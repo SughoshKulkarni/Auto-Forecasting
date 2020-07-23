@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Time series forecasting</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+<center>
+<div>
+<h2>Time Series Forecasting</h2>
+<form action="{{ url_for('forecast')}}"method="post" enctype="multipart/form-data">
+<p>Step 1: Choose an excel file with extension .xlsx or .xls</p>
+<input type=file name=file id="myFileInput">
+
+<br>
+<p>Step 2: Choose the Confidence Interval</p>
+<select name="CI" id="CI">
+  <option value=0.5>95%</option>
+  <option value=0.01>99%</option>
+  <option value=0.1>90%</option>
+</select>
+
+<br>
+<p>Step 3: Choose the Forecast length</p>
+<select name="months" id="months">
+<option value=1>1 month</option>
+<option value=2>2 months</option>
+<option value=3>3 months</option>
+<option value=4>4 months</option>
+<option value=5>5 months</option>
+<option value=6>6 months</option>
+<option value=7>7 months</option>
+<option value=8>8 months</option>
+<option value=9>9 months</option>
+<option value=10>10 months</option>
+<option value=11>11 months</option>
+<option value=12>12 months</option>
+</select>
+<br><br> 
+  
+  
+<button type="submit">Forecast</button>
+</form>
+<br>
+
+<form action="{{ url_for('home')}}"method="post">
+<button type="submit">Refresh</button>
+</form>
+<br>
+<br>
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+    
+<br>
+
+{% with info = get_flashed_messages(category_filter=["info"]) %}
+{% if info %}
+    {%- for msg in info %}
+    {{ msg }}
+    {% endfor -%}
+{% endif %}
+{% endwith %}
+
+ </div>
+</center>
+
+</body>
+</html>
