@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Time series forecasting</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+<center>
+<div>
+<h2>Time Series Forecasting</h2>
+<br>
+
+<p>
+Auto-Forecasting is a web application that takes in an excel file with univariate time series data and provides forecasts. <br>
+Auto-Forecasting works on SARIMA modeling.
+</p>
+
+<p>
+Auto-Forecasting is a name which I have given to the web application that I have built.
+For this project, we used Flask API to create the app and Python for modeling. The SARIMA model in this application can work with univariate time series. I was working on a building a forecasting model and always wanted to make the forecast easy and simple for people to get their forecasts in less number of steps and also ensuring less error. I took inspiration from an article by <a href="https://www.linkedin.com/in/susanli/" style="color: black" target="_blank">Susan Li</a> on towardsdatascience.com website and link is <a href="https://towardsdatascience.com/@actsusanli" style="color: black" target="_blank">here</a>.
+</p>
+
+<br>
+  Created by:
+  <br>
+<br>
+
+<div class="row" align="center">
+  <div class="column" align="center">
+      <a href="https://www.linkedin.com/in/sughoshkulkarni/" target="_blank"> <img src="https://lh3.googleusercontent.com/kZ_YVf0-VEs8GPtKC7Y2jP2bTRrZDs99EPlF7cMsNWQoUU-VqTuigV4985a31L-V1j9439l2GGsYhp7a6OQZYhz-Fzk0sDLAXQMYhECScK81cYGs8V_cN_HblN75PrgYWpYVhD5PZw=w2400" alt="Sughosh" style="width:10%"></a><br>
+	<a href="https://www.linkedin.com/in/sughoshkulkarni/" style="color: black;font-size:115%;text-decoration:none;font-weight: bold;line-height: 25px;text-align:center;" target="_blank">Sughosh<br>Kulkarni</a><br>
+  </div>
+<br>
+More about this project:
+ <a href="https://sughoshkulkarni.github.io/Auto-Forecasting/" style="color: black" target="_blank"> Auto-Forecasting/GitHub</a> 
+ <br><br>
+</div>
+
+
+</div>
+</center>
+
+</body>
+
+ <footer class="footer">
+  <CENTER>
+  <a href="{{ url_for('home')}}" style="color:black;text-decoration:none;font-family:Helvetica;font-size:95%; padding-bottom:10px">Home </a>  
+  <a href="{{ url_for('about')}}" style="color:black;text-decoration:none;font-family:Helvetica;font-size:95%; padding-bottom:10px">| About </a>
+  <a href="{{ url_for('helps')}}" style="color:black;text-decoration:none;font-family:Helvetica;font-size:95%">| Help</a>
+  </CENTER>
+</footer>
+</html>
