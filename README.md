@@ -1,7 +1,7 @@
 # Auto-Forecasting
 This is a web application that takes in an excel file with univariate time series data (Excel file with two columns: Date (Format:YYYY-MM-DD or YYYY-MM) and Values (historical sales, visitors on a website, gold prices, stock prices, etc.) and provides forecasts.<br><br>Auto-Forecasting works on buiding time series forecasting technique called [SARIMA](https://machinelearningmastery.com/sarima-for-time-series-forecasting-in-python/ "Seasonal ARIMA") which stands for Seasonal Autoregressive Integrated Moving Average. 
 
-<p align="center"><img src="https://tinyurl.com/yxcwp3tb" width="70%" height="80%"></p>
+<p align="center"><img src="https://tinyurl.com/yxcwp3tb" width="60%" height="70%"></p>
 
 ---
 
