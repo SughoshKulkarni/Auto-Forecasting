@@ -12,7 +12,7 @@ For this project, we used Flask API to create the app and Python for modeling. T
 
 ## Functionality
 The web app has an interface with three steps:
-* Step 1:	Choose an excel file with your data. Preferably the file should have two columns: Date and Values(historical sales, visitors on a website, gold prices, stock prices, etc.)
+* Step 1:	Choose an excel file with your data (format allowed: .xls or .xlsx). Preferably the file should have two columns: Date and Values(historical sales, visitors on a website, gold prices, stock prices, etc.)
 * Step 2:	Choose the confidence interval that you like. The options provided are 99% CI, 95% CI, and 90% CI.
 * Step 3:	Choose the forecast length of your wish. The options provided range from 1 month to 12 months. (The forecasting model only provides monthly forecasting regardless of date format on input file as of now).
 
