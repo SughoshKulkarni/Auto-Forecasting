@@ -18,7 +18,7 @@ The web app has an interface with three steps:
 
 By clicking on forecast button, the the model reads the excel file and converts the date into YYYY-MM-DD format if not in that format already. If the data is in daily format, it will sum by grouping the values from the same month and takes an average of the month. The new data is run through a series of SARIMA models. The model with best [AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion "Akaike information criterion") is chosen and will fit that model to the data, and generate the forecasts with the confidence intervals and display in a table format.
 <br>
-The forecasts work better if the data is monthly data or daily data and a total of atleast 4-6 years of historical data.
+The model works better if the data is monthly data or daily data and a total of atleast 4-6 years of historical data.
 
 ## Languages and Technologies used
 * Python
