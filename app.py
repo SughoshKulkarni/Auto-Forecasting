@@ -15,6 +15,14 @@ app.secret_key = "VaishSughosh%$1234"
 def home():
     return render_template('index.html')
 
+@app.route('/about',methods=['GET', 'POST'])
+def about():
+    return render_template('about.html')
+
+@app.route('/help',methods=['GET', 'POST'])
+def helps():
+    return render_template('help.html')
+
 
 @app.route('/forecast',methods=['GET', 'POST'])
 def forecast():
