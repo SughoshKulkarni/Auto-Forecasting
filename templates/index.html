@@ -10,7 +10,15 @@
   <meta property="og:title" content="Auto-Forecasting" />
   <meta charset="UTF-8">
   <title>Auto-Forecasting</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171569126-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-171569126-2');
+</script>
  <style>
  body {
 	background: linear-gradient(-45deg, #23a6d5, #21bf9a, #23a6d5, #21bf9a);
@@ -289,6 +297,17 @@ iframe{
     overflow:hidden;
 }
 </style>
+    <script type="text/javascript">
+
+        function picture(){ 
+        var pic = "https://lh3.googleusercontent.com/t7UNdciFWazxmTzamlDe03Nw0vZx2dT8I4MSelMXVYH9yprLC3KESgvRL_4FZ3cGU2b_prtmiApVmzCgVca2RTCcsFOKBKH2KnP-e3h6hrebztSjZ2uu8w6bJoGHNzB_0VNkqoCRQg=w2400"
+        document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+        document.getElementById('bigpic').style.display='block';
+
+        }
+
+
+    </script>
 </head>
 
 <body>
@@ -339,16 +358,17 @@ iframe{
 <br><br> <br>
   
   
-<button type="submit" class="button button1">Forecast</button>
+<button type="submit" onclick="picture()" class="button button1">Forecast</button>
 </form>
 <br>
 
 <form action="{{ url_for('home')}}"method="post">
 <button type="submit" class="button button2">Refresh</button>
+
+  <img id="bigpic" src="bigpic" style="display:none;padding-top:20px;width:5%;" />
 </form>
 <br>
-<br>
-<br>
+
 </center>
 </div>
 <br>
