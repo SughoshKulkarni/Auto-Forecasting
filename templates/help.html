@@ -2,25 +2,24 @@
 <html >
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
-  <title>Auto-Forecasting</title>
-  <meta property="og:image" content="https://lh3.googleusercontent.com/VWxAtj_pD5vMLI1rL2lQvZ1hcg8z3MJfrEuzefdz6LJjRDa5EMelBOmiQcTHIOWmVeYklcxUkuRdJvWdaUqp9j44ocAp_SEBykX7mdie1unqiPfQD5xab_TR7KetmjOrWMUjh3WxJ1fizHjqlW6d9aLMLOQu1tL-80m0frJfMPKEWptVWqqR3FLpjw65up6HFJgRCXNjGbKprQzyMSlxUTgDIPEfDsDlcMu2a1iPWAprnaelL3rmrENX6fp0iaZ6gygeI0PdQy3auzfBcQQFGa3X7VUER_SGbp68HYxJTi_XreGpKIDzHPxlwcPAQKR9XOLXTfqYVpo6uX1BH31JN0ibZXlyZrJdD_mXrakCHWpXuIzjSWTXRbK-IiUb5vAx3fqIWNh6bDKkeRgqvuCTAaUYJANsUutTJW56J7oHp5S778A8KjoR6TtmmwCo7lb-CqjFZKoflMh1lognNMyPLpvn0r3j5Q9hkVToUDE0mjybAf_6rE87McRDPsqVWBgsVedsesvtoamGqj7o9-Qvbo2wh2fjYomj8VYJ1rmxnhXpfh32OlPIZGolcSOMuw9ca61EL2J9vksmAzz0qkUD5kokbRFPZF-fjR-Kbt1FgAsWCu7cL3Fg8cT-xD9UUSibSrw7LeV-kgqNx8CFXf_SIAUkTzikcQQqaTwYYPp-hW5a9FlE9W9CsC1tzTZH=w1871-h975-no?authuser=1" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://bit.ly/30Kj0bh" />
   <meta property="og:description" content="Auto-Forecasting is a web application that takes in an excel file with univariate time series data and provides forecasts. Auto-Forecasting works on SARIMA modeling." />
   <meta property="og:title" content="Auto-Forecasting" />
   <meta charset="UTF-8">
+  <title>Time series forecasting</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
 </head>
 
 <body>
 
 <div>
 <center>
-<h2>Time Series Auto-Forecasting</h2>
+<h2>Time Series Forecasting</h2>
 <br>
 <div align="center">
 The web app has an interface with three steps:
@@ -32,9 +31,7 @@ The web app has an interface with three steps:
 </div>
 
 By clicking on forecast button, the the model reads the excel file and converts the date into YYYY-MM-DD format if not in that format already. If the data is in daily format, it will sum by grouping the values from the same month and takes an average of the month. The new data is run through a series of SARIMA models. The model with best <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion" style="color: black" target="_blank">AIC</a> is chosen and will fit that model to the data, and generate the forecasts with the confidence intervals and display in a table format.
-<br>
-The model works better if the data is monthly data or daily data and a total of atleast 4-6 years of historical data.
-  <br><br><br><br>
+<br><br><br><br>
 </body>
 
  <footer class="footer">

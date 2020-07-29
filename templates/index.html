@@ -2,24 +2,23 @@
 <html >
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
-  <title>Auto-Forecasting</title>
-  <meta property="og:image" content="https://lh3.googleusercontent.com/VWxAtj_pD5vMLI1rL2lQvZ1hcg8z3MJfrEuzefdz6LJjRDa5EMelBOmiQcTHIOWmVeYklcxUkuRdJvWdaUqp9j44ocAp_SEBykX7mdie1unqiPfQD5xab_TR7KetmjOrWMUjh3WxJ1fizHjqlW6d9aLMLOQu1tL-80m0frJfMPKEWptVWqqR3FLpjw65up6HFJgRCXNjGbKprQzyMSlxUTgDIPEfDsDlcMu2a1iPWAprnaelL3rmrENX6fp0iaZ6gygeI0PdQy3auzfBcQQFGa3X7VUER_SGbp68HYxJTi_XreGpKIDzHPxlwcPAQKR9XOLXTfqYVpo6uX1BH31JN0ibZXlyZrJdD_mXrakCHWpXuIzjSWTXRbK-IiUb5vAx3fqIWNh6bDKkeRgqvuCTAaUYJANsUutTJW56J7oHp5S778A8KjoR6TtmmwCo7lb-CqjFZKoflMh1lognNMyPLpvn0r3j5Q9hkVToUDE0mjybAf_6rE87McRDPsqVWBgsVedsesvtoamGqj7o9-Qvbo2wh2fjYomj8VYJ1rmxnhXpfh32OlPIZGolcSOMuw9ca61EL2J9vksmAzz0qkUD5kokbRFPZF-fjR-Kbt1FgAsWCu7cL3Fg8cT-xD9UUSibSrw7LeV-kgqNx8CFXf_SIAUkTzikcQQqaTwYYPp-hW5a9FlE9W9CsC1tzTZH=w1871-h975-no?authuser=1" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://bit.ly/30Kj0bh" />
   <meta property="og:description" content="Auto-Forecasting is a web application that takes in an excel file with univariate time series data and provides forecasts. Auto-Forecasting works on SARIMA modeling." />
   <meta property="og:title" content="Auto-Forecasting" />
   <meta charset="UTF-8">
+  <title>Time series forecasting</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
 </head>
 
 <body>
 <center>
 <div>
-<h2>Time Series Auto-Forecasting</h2>
+<h2>Time Series Forecasting</h2>
 <form action="{{ url_for('forecast')}}"method="post" enctype="multipart/form-data">
 <p>Step 1: Choose an excel file with extension .xlsx or .xls</p>
 <input type=file name=file id="myFileInput">
@@ -27,7 +26,7 @@
 <br>
 <p>Step 2: Choose the Confidence Interval</p>
 <select name="CI" id="CI">
-  <option value=0.5>95%</option>
+  <option value=0.05>95%</option>
   <option value=0.01>99%</option>
   <option value=0.1>90%</option>
 </select>
@@ -60,20 +59,8 @@
 </form>
 <br>
 <br>
-{% for table in tables %}
-            {{titles[loop.index]}}
-            {{ table|safe }}
-{% endfor %}
     
 <br>
-
-{% with info = get_flashed_messages(category_filter=["info"]) %}
-{% if info %}
-    {%- for msg in info %}
-    {{ msg }}
-    {% endfor -%}
-{% endif %}
-{% endwith %}
 <br><br>
 
  </div>
