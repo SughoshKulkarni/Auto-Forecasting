@@ -26,6 +26,6 @@ The model works better if the data is monthly data or daily data and a total of 
 * HTML
 * Heroku
 
-You can check out the website [here](https://autoforecast.herokuapp.com/ "Auto-Forecast") or go to this website [https://autoforecast.herokuapp.com/](https://autoforecast.herokuapp.com/ "Auto-Forecast")
+You can check out the website [here](https://autoforecast.herokuapp.com/ "Auto-Forecasting") or go to this website [https://autoforecast.herokuapp.com/](https://autoforecast.herokuapp.com/ "Auto-Forecasting")
 
 ---
