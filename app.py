@@ -6,6 +6,9 @@ import itertools
 warnings.filterwarnings("ignore")
 import statsmodels.api as sm
 from warnings import filterwarnings
+from io import BytesIO
+import matplotlib.pyplot as plt
+import base64
 
 
 app = Flask(__name__)
@@ -28,6 +31,7 @@ def helps():
 def forecast():
     f = (request.files['file'])
     ci = float(request.form.get("CI",""))
+    actual_ci = 100-(ci*100)
     month = int(request.form.get("months",""))
     
     try:
@@ -55,7 +59,7 @@ def forecast():
         print('It is monthly data')
         excel_file = excel_file.set_index('Date')
         y = excel_file['Values'].resample('MS').mean()
-        
+      
     p = d = q = range(0, 2)
     pdq = list(itertools.product(p, d, q))
     seasonal_pdq = [(x[0], x[1], x[2], 12) for x in list(itertools.product(p, d, q))]
@@ -93,8 +97,44 @@ def forecast():
     Final_results_df= Final_results_df.reindex(columns=column_names)
     Final_results_df = Final_results_df.round(2)
     
-    flash("The model details are:pdq order = {}, PDQs order = {} and AIC = {}".format(pdq_order,PDQs_order,AIC), "info")
-    return render_template('index.html',  tables=[Final_results_df.to_html(classes='data')], titles=Final_results_df.columns.values)
+    ######Preparation for Plots######
+    img = BytesIO()
+    img2 = BytesIO()
+    pred_uc = results.get_forecast(steps=month)
+    pred_ci = pred_uc.conf_int(alpha=ci)
+    
+    ######First Plot######
+    ax = y.plot(label='observed', figsize=(14, 7))
+    pred_uc.predicted_mean.plot(ax=ax, label='Forecast', title = 'Observed data and Forecasts')
+    ax.fill_between(pred_ci.index,
+                    pred_ci.iloc[:, 0],
+                    pred_ci.iloc[:, 1], color='g', alpha=.25)
+    ax.set_xlabel('Date')
+    ax.set_ylabel('Values')
+    
+    plt.legend()
+    plt.savefig(img, format='png')
+    plt.close()
+    img.seek(0)
+    plot_url = base64.b64encode(img.getvalue()).decode('utf8')
+    
+    ######Second Plot######
+    forecasts = results.get_forecast(steps=month).predicted_mean
+    ax = forecasts.plot(figsize=(14, 7), label='Forecasts', color='r',marker = '.', markersize = 15, title = 'Forecasts with {}% confidence interval'.format(actual_ci)) 
+    ax.fill_between(pred_ci.index,
+                    pred_ci.iloc[:, 0],
+                    pred_ci.iloc[:, 1], color='g', alpha=.25)
+    ax.set_xlabel('Months')
+    ax.set_ylabel('Values')
+        
+    plt.legend()
+    plt.savefig(img2, format='png')
+    plt.close()
+    img2.seek(0)
+    plot_url2 = base64.b64encode(img2.getvalue()).decode('utf8')
+
+    flash("The model details are: pdq order = {}, PDQs order = {} and AIC = {}".format(pdq_order,PDQs_order,AIC), "info")
+    return render_template('output.html',  tables=[Final_results_df.to_html(classes='data')], titles=Final_results_df.columns.values, plot_url=plot_url, plot_url2=plot_url2)     # ,  final_list_plot=final_list_plot, legend=legend, datelist=date_list, Forecastlist=Forecast_list,
 
 if __name__ == "__main__":
     app.run(debug=True)
