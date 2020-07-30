@@ -30,6 +30,9 @@ def helps():
 def privacy():
     return render_template('privacy.html')
 
+@app.route('/feedback', methods=['GET', 'POST'])
+def feedback():
+    return render_template('feedback.html')
 
 @app.route('/forecast',methods=['GET', 'POST'])
 def forecast():
