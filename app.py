@@ -1,5 +1,5 @@
 import numpy as np
-from flask import Flask, request, render_template, flash
+from flask import Flask, request, render_template, flash, redirect, url_for
 import pandas as pd
 import warnings
 import itertools
@@ -33,6 +33,11 @@ def privacy():
 @app.route('/feedback', methods=['GET', 'POST'])
 def feedback():
     return render_template('feedback.html')
+
+@app.errorhandler(500)
+def request_internal_server_error(error):
+    flash("Please ensure the Excel file has univariate time series data.", "error")
+    return redirect(url_for("index"),500)
 
 @app.route('/forecast',methods=['GET', 'POST'])
 def forecast():
