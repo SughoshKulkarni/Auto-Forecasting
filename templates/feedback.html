@@ -9,7 +9,7 @@
   <meta property="og:description" content="Auto-Forecasting is a web application that takes in an excel file with univariate time series data and provides forecasts. Auto-Forecasting works on SARIMA modeling." />
   <meta property="og:title" content="Auto-Forecasting" />
   <meta charset="UTF-8">
-  <title>Help | Auto-Forecasting</title>
+  <title>Auto-Forecasting</title>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171569126-2"></script>
 <script>
@@ -297,6 +297,17 @@ iframe{
     overflow:hidden;
 }
 </style>
+    <script type="text/javascript">
+
+        function picture(){ 
+        var pic = "https://lh3.googleusercontent.com/t7UNdciFWazxmTzamlDe03Nw0vZx2dT8I4MSelMXVYH9yprLC3KESgvRL_4FZ3cGU2b_prtmiApVmzCgVca2RTCcsFOKBKH2KnP-e3h6hrebztSjZ2uu8w6bJoGHNzB_0VNkqoCRQg=w2400"
+        document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+        document.getElementById('bigpic').style.display='block';
+
+        }
+
+
+    </script>
 </head>
 
 <body>
@@ -313,27 +324,36 @@ iframe{
   <div class="cube"></div>
 
  <div style="width:70%;background-color: rgba(4, 43, 76, 0.3);border-radius: 40px;min-width: 300px;color:white;font-family:Helvetica;font-size:100%;padding-top:0px;padding-right:30px;padding-bottom:30px;padding-left:30px;" width="1024" height="500">
-<br><br><br>
-<div align="center">
-The web app has an interface with three steps:
-<ul style="padding-left:15px;">
-<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 1:	Choose an excel file with your data (format allowed: .xls or .xlsx). Preferably the file should have two columns: Date and Values (historical sales, visitors on a website, gold prices, stock prices, etc.)</li>
-<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 2:	Choose the confidence interval that you like. The options provided are 99% CI, 95% CI, and 90% CI.</li>
-<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 3:	Choose the forecast length of your wish. The options provided range from 1 month to 12 months (The forecasting model only provides monthly forecasting regardless of date format on input file as of now).</li>
-</ul>
-</div>
+<br><br>
 
-By clicking on forecast button, the the model reads the excel file and converts the date into YYYY-MM-DD format if not in that format already. If the data is in daily format, it will sum by grouping the values from the same month and takes an average of the month. The new data is run through a series of SARIMA models. The model with best <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion" style="color: white" target="_blank">AIC</a> is chosen and will fit that model to the data, and generate the forecasts with the confidence intervals and display in a table format.
+
+<CENTER>
+
+<a style="color:white;text-decoration:none;font-family:Helvetica;font-size:110%"><h3>Welcome to Auto-Forecasting!</h3></a>
+
+<p style="font-size:100%"> <br>
+
+
+ 
+ <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYDBa_PXNjZK52fGRkpRpbUI5mzxhoT27vjWwpDVorrX2oHw/viewform?embedded=true" width="100%" height="1040" frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" scrolling="no" >Loading…</iframe>
+ </p>
+
+
+
+
+</CENTER>
+
 <br>
-The model works better if the data is monthly data or daily data and a total of atleast 4-6 years of historical data.
-  <br><br>
-</div>
+
+
+<br>
+
 </center>
+</div>
 <br>
 </body>
-
-<div class="spacer"></div>
-<footer class="footer">
+ <div class="spacer"></div>
+ <footer class="footer" >
   <CENTER>
   <a href="{{ url_for('home')}}" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%; padding-bottom:10px">Home </a>  
   <a href="{{ url_for('about')}}" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%; padding-bottom:10px">| About </a>
