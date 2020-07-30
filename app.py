@@ -26,6 +26,10 @@ def about():
 def helps():
     return render_template('help.html')
 
+@app.route('/privacy',methods=['GET', 'POST'])
+def privacy():
+    return render_template('privacy.html')
+
 
 @app.route('/forecast',methods=['GET', 'POST'])
 def forecast():
