@@ -317,15 +317,15 @@ iframe{
 <div align="center">
 The web app has an interface with three steps:
 <ul style="padding-left:15px;">
-<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 1:	Choose an excel file with your data (format allowed: .xls or .xlsx). Preferably the file should have two columns: Date and Values (historical sales, visitors on a website, gold prices, stock prices, etc.)</li>
-<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 2:	Choose the confidence interval that you like. The options provided are 99% CI, 95% CI, and 90% CI.</li>
-<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 3:	Choose the forecast length of your wish. The options provided range from 1 month to 12 months (The forecasting model only provides monthly forecasting regardless of date format on input file as of now).</li>
+<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 1: Choose an excel file with your data (format allowed: .xls or .xlsx). Preferably the file should have two columns: Date and Values (historical sales, visitors on a website, gold prices, stock prices, and many more).</li>
+<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 2: Choose the confidence interval that you like. The options provided are 99% CI, 95% CI, and 90% CI.</li>
+<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 3: Choose the forecast length of your wish. The options provided range from 1 month to 12 months (The forecasting model only provides monthly forecasting regardless of date format on the input file as of now).</li>
 </ul>
 </div>
 
-By clicking on forecast button, the the model reads the excel file and converts the date into YYYY-MM-DD format if not in that format already. If the data is in daily format, it will sum by grouping the values from the same month and takes an average of the month. The new data is run through a series of SARIMA models. The model with best <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion" style="color: white" target="_blank">AIC</a> is chosen and will fit that model to the data, and generate the forecasts with the confidence intervals and display in a table format.
+By clicking on the forecast button, the model reads the excel file and converts the dates into YYYY-MM-DD format if not in that format already. If the data is in a daily form, it will sum by grouping the values from the same month and takes an average of the month. The new information is run through a series of SARIMA models. The model with the best <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion" style="color: white" target="_blank">AIC</a> is chosen and will fit that model to the data, and generate the forecasts with the confidence intervals and display in a table format.
 <br>
-The model works better if the data is monthly data or daily data and a total of atleast 4-6 years of historical data.
+The model works better if the data is monthly data or daily data and a total of at least 4-6 years of historical data.
   <br><br>
 </div>
 </center>
