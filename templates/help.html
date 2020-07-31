@@ -315,11 +315,12 @@ iframe{
  <div style="width:70%;background-color: rgba(4, 43, 76, 0.3);border-radius: 40px;min-width: 300px;color:white;font-family:Helvetica;font-size:100%;padding-top:0px;padding-right:30px;padding-bottom:30px;padding-left:30px;" width="1024" height="500">
 <br><br><br>
 <div align="center">
-The web app has an interface with three steps:
+The web app has an interface with four steps:
 <ul style="padding-left:15px;">
-<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 1: Choose an excel file with your data (format allowed: .xls or .xlsx). Preferably the file should have two columns: Date and Values (historical sales, visitors on a website, gold prices, stock prices, and many more).</li>
-<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 2: Choose the confidence interval that you like. The options provided are 99% CI, 95% CI, and 90% CI.</li>
-<li style="margin-left:15px;text-align:left;padding-left:0px;">Step 3: Choose the forecast length of your wish. The options provided range from 1 month to 12 months (The forecasting model only provides monthly forecasting regardless of date format on the input file as of now).</li>
+<li style="margin-left:15px;text-align:left;padding-left:0px;"><b>Step 1:</b> Choose an excel file with your data (format allowed: .xls or .xlsx). Preferably the file should have two columns: Date and Values (historical sales, visitors on a website, gold prices, stock prices, and many more). Download a sample file <a href="{{ url_for('downloads')}}" style="color:white;font-family:Helvetica;font-size:100%; padding-bottom:10px">here</a>.</li><br>
+<li style="margin-left:15px;text-align:left;padding-left:0px;"><b>Step 2:</b> Choose the confidence interval that you like. The options provided are 99% CI, 95% CI, and 90% CI.</li><br>
+<li style="margin-left:15px;text-align:left;padding-left:0px;"><b>Step 3:</b> Choose the forecast length of your wish. The options provided range from 1 month to 12 months (The forecasting model only provides monthly forecasting regardless of date format on the input file as of now).</li><br>
+<li style="margin-left:15px;text-align:left;padding-left:0px;"><b>Step 4:</b> Click 'FORECAST'</li>
 </ul>
 </div>
 
@@ -330,6 +331,7 @@ The model works better if the data is monthly data or daily data and a total of 
 </div>
 </center>
 <br>
+
 </body>
 
 <div class="spacer"></div>
