@@ -304,7 +304,7 @@ iframe{
 
 .column {
   float: center;
-  width: 17.33%;
+  width: 27.33%;
   
   padding: 10px;
   margin: 0 auto;
@@ -328,7 +328,16 @@ iframe{
   }
 }
 </style>
+<style>
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
 
+</style>
 </head>
 <body>
 <center>
@@ -345,14 +354,28 @@ iframe{
 
  <div style="width:70%;background-color: rgba(4, 43, 76, 0.3);border-radius: 40px;min-width: 300px;color:white;font-family:Helvetica;font-size:100%;padding-top:0px;padding-right:30px;padding-bottom:30px;padding-left:30px;" width="1024" height="500">
 <br><br>
-
 <p>
 Auto-Forecasting is a web application that takes in an excel file with univariate time series data and provides forecasts. <br>
 Auto-Forecasting works on SARIMA modeling.
-</p>
+</p><br>
+<div class="row" align="center">
+  <div class="column" align="center">
+      <img src="https://lh3.googleusercontent.com/h7bEO_ytBL-eoMMnW_FtgnVa3MvqYGN8cQElaJLb9vR07u3_cxfE9XfXYrIfRWPYuiwLk3wX6Ik0DUkzz06YfN6aDJH_BCWyA1636thDHSTIVz40M3KA8P6Gf_bIl_Ur1qYItd8QlQ=w2400" alt="Excel file upload" style="width:59.1%"><br>
+	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Upload<br>Excel File</p><br>
+  </div>
+  <div class="column" align="center">
+     <img src="https://lh3.googleusercontent.com/KFxLClhNvbZ6YD8mcgp-wejL3-jXV4jyas3bktWQ-sgRZCwysPVI5ipKquWioA_iCAwUDy6kbvivrGRj6867aZHmtT7tprZTozXaxAyfbqybsUqHuw6Kv0qcJ3wTcPyhco_93DPGDw=w2400" alt="Forecasting model" style="width:50%"><br>
+	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Automatic Model Selection<br>(Based on data)</p><br>
+  </div>
+    <div class="column" align="center">
+     <img src="https://lh3.googleusercontent.com/IEGoYeoellhBMbhB_8eXQ0Rbqw9-kcSpHrLk5IVaDO408xP_jZFPH735IQYx05O6Ve6bZvGFs-v13MGus2-acNMCMeE45-xgBMMsku4RogrhfW9Fh-fY8SU74-RsWPlEpRIvQiIP2A=w2400" alt="Forecasts" style="width:50%"><br>
+	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Generated<br>Forecasts</p><br>
+  </div>
+<br>
 
+</div>
 <p>
-For this project, we used Flask API to create the app and Python for modeling. The SARIMA model in this application can work with a univariate time series. <br><b>Sughosh Kulkarni:</b> <i>"I was working on building a forecasting model. I always wanted to make the forecast easy and straightforward for people to get their forecasts in less number of steps and also ensuring less error. I took inspiration from an article by <a href="https://www.linkedin.com/in/susanli/" style="color: white" target="_blank">Susan Li</a> on the towardsdatascience.com website and the link is <a href="https://towardsdatascience.com/an-end-to-end-project-on-time-series-analysis-and-forecasting-with-python-4835e6bf050b" style="color: white" target="_blank">here</a>"</i>
+For this project, we used Flask API to create the app and Python for modeling. The SARIMA model in this application can work with a univariate time series. <br><b>Sughosh Kulkarni:</b> <i>"I was working on building a forecasting model. I always wanted to make the forecast easy and straightforward for people to get their forecasts in less number of steps and also ensuring less error. I took inspiration from an article by <a href="https://www.linkedin.com/in/susanli/" style="color: white" target="_blank">Susan Li</a> on the towardsdatascience.com website and the link is <a href="https://towardsdatascience.com/@actsusanli" style="color: white" target="_blank">here</a>"</i>
 </p>
 
 <br>
@@ -382,6 +405,7 @@ More about this project:
 
 </body>
  <div class="spacer"></div>
+ <div id="noprint" class='no-print'>
  <footer class="footer" >
   <CENTER>
   <a href="{{ url_for('home')}}" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%; padding-bottom:10px">Home </a>  
@@ -391,5 +415,5 @@ More about this project:
   <a href="{{ url_for('feedback')}}" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%"> | Feedback</a>
   <a href="{{ url_for('privacy')}}" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%">| Privacy Policy</a>
   </CENTER>
-</footer>
+</footer></div>
 </html>

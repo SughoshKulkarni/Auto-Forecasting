@@ -215,21 +215,17 @@
 
 .button4 {
   border-radius: 12px;
-  padding: 15px 40.5px;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-  border: 2px solid #07A261;
+  padding: 10px 32.5px;
+  background-color: rgba(212, 85, 0);
+  color: white;
+
 }
 
 .button4:hover {
-  background-color: #07A261;
-  color: white;
+  background-color: white;
+  color: rgba(212, 85, 0);
 }
 
-.button4:focus {
-  background-color: #07A261;
-  color: white;
-}
 
 .button5 {
   border-radius: 12px;
@@ -297,6 +293,16 @@ iframe{
     overflow:hidden;
 }
 </style>
+<style>
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
+</style>
 </head>
 
 <body>
@@ -316,8 +322,11 @@ iframe{
 <br><br>
 
 <form action="{{ url_for('home')}}"method="post">
-<button type="submit" class="button button2">Refresh</button>
-</form>
+<div id="noprint" class='no-print'><button type="submit" class="button button2">Refresh</button></div>
+</form><br>
+<div id="downloaddiv" class="stuff">
+<button id="download" class="button button4" onclick="download_pdf()">Download</button> 
+</div>
 <br>
 
 {% for table in tables %}
@@ -334,12 +343,8 @@ iframe{
 <br>
 </center>
 
-
-
-
 <center>
 <br>
-
 {% with info = get_flashed_messages(category_filter=["info"]) %}
 {% if info %}
     {%- for msg in info %}
@@ -349,12 +354,29 @@ iframe{
 {% endwith %}
 <br><br>
 </center>
-  </center>
+
 <br>
 <br>
+
 </center>
 </div>
 <br>
+
+<script type="text/javascript">
+function download_pdf() {
+         document.getElementById('downloaddiv').style.display = 'none';
+         let doc = new jsPDF('p', 'pt', 'a4');
+         doc.addHTML(document.body, function () {
+             doc.save('Forecasts.pdf');
+         });
+         
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+
 </body>
  <div class="spacer"></div>
  <footer class="footer" >
