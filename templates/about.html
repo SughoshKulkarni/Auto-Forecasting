@@ -304,7 +304,7 @@ iframe{
 
 .column {
   float: center;
-  width: 27.33%;
+  width: 17.33%;
   
   padding: 10px;
   margin: 0 auto;
@@ -312,6 +312,17 @@ iframe{
   
   
 }
+.arrow {
+  float: center;
+  width: 5.33%;
+  
+  padding: 0px;
+  margin: 0 auto;
+  display: inline-block
+  
+  
+}
+
 
 
 /* Clearfix (clear floats) */
@@ -320,6 +331,7 @@ iframe{
   clear: both;
   display: table;
 }
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1000px) {
@@ -360,18 +372,28 @@ Auto-Forecasting works on SARIMA modeling.
 </p><br>
 <div class="row" align="center">
   <div class="column" align="center">
-      <img src="https://lh3.googleusercontent.com/h7bEO_ytBL-eoMMnW_FtgnVa3MvqYGN8cQElaJLb9vR07u3_cxfE9XfXYrIfRWPYuiwLk3wX6Ik0DUkzz06YfN6aDJH_BCWyA1636thDHSTIVz40M3KA8P6Gf_bIl_Ur1qYItd8QlQ=w2400" alt="Excel file upload" style="width:59.1%"><br>
-	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Upload<br>Excel File</p><br>
+      <img src="https://lh3.googleusercontent.com/h7bEO_ytBL-eoMMnW_FtgnVa3MvqYGN8cQElaJLb9vR07u3_cxfE9XfXYrIfRWPYuiwLk3wX6Ik0DUkzz06YfN6aDJH_BCWyA1636thDHSTIVz40M3KA8P6Gf_bIl_Ur1qYItd8QlQ=w2400" alt="Excel file upload" style="width:59.1%;padding-right:20px;"><br>
+	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Upload<br>Excel File</p>
   </div>
-  <div class="column" align="center">
-     <img src="https://lh3.googleusercontent.com/KFxLClhNvbZ6YD8mcgp-wejL3-jXV4jyas3bktWQ-sgRZCwysPVI5ipKquWioA_iCAwUDy6kbvivrGRj6867aZHmtT7tprZTozXaxAyfbqybsUqHuw6Kv0qcJ3wTcPyhco_93DPGDw=w2400" alt="Forecasting model" style="width:50%"><br>
-	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Automatic Model Selection<br>(Based on data)</p><br>
+  <div class="arrow" align="center">
+     <img src="https://lh3.googleusercontent.com/nDdwd6oTdooTB8t3aaaJZrdIghFxpUA85oEme-ssWBxHMBNOqr0Ds47Jq8ZMxZ9woJV6TLDMfqtAXoHFyRKhlftQ9a3XBc9JoezSMSqIW-1jwDbpq72MGzpXpmMrEI3O5WVuQ81A0w=w2400" alt="Forecasting model" style="width:30%"><br>
+	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px; padding:0px;"><br><br></p>
   </div>
     <div class="column" align="center">
-     <img src="https://lh3.googleusercontent.com/IEGoYeoellhBMbhB_8eXQ0Rbqw9-kcSpHrLk5IVaDO408xP_jZFPH735IQYx05O6Ve6bZvGFs-v13MGus2-acNMCMeE45-xgBMMsku4RogrhfW9Fh-fY8SU74-RsWPlEpRIvQiIP2A=w2400" alt="Forecasts" style="width:50%"><br>
-	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Generated<br>Forecasts</p><br>
+     <img src="https://lh3.googleusercontent.com/KFxLClhNvbZ6YD8mcgp-wejL3-jXV4jyas3bktWQ-sgRZCwysPVI5ipKquWioA_iCAwUDy6kbvivrGRj6867aZHmtT7tprZTozXaxAyfbqybsUqHuw6Kv0qcJ3wTcPyhco_93DPGDw=w2400" alt="Forecasting model" style="width:50%"><br>
+	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Automatic Model Selection<br></p>
+	 
+	 </div>
+	   <div class="arrow" align="center">
+     <img src="https://lh3.googleusercontent.com/nDdwd6oTdooTB8t3aaaJZrdIghFxpUA85oEme-ssWBxHMBNOqr0Ds47Jq8ZMxZ9woJV6TLDMfqtAXoHFyRKhlftQ9a3XBc9JoezSMSqIW-1jwDbpq72MGzpXpmMrEI3O5WVuQ81A0w=w2400" alt="Forecasting model" style="width:30%"><br>
+	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px; padding:0px;"><br><br></p>
   </div>
-<br>
+    <div class="column" align="center">
+	<img src="https://lh3.googleusercontent.com/IEGoYeoellhBMbhB_8eXQ0Rbqw9-kcSpHrLk5IVaDO408xP_jZFPH735IQYx05O6Ve6bZvGFs-v13MGus2-acNMCMeE45-xgBMMsku4RogrhfW9Fh-fY8SU74-RsWPlEpRIvQiIP2A=w2400" alt="Forecasts" style="width:50%"><br>
+	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Generate<br>Forecasts</p>
+     
+  </div>
+
 
 </div>
 <p>
@@ -385,11 +407,11 @@ For this project, we used Flask API to create the app and Python for modeling. T
 
 <div class="row" align="center">
   <div class="column" align="center">
-      <a href="https://www.linkedin.com/in/sughoshkulkarni/" target="_blank"><img src="https://lh3.googleusercontent.com/kZ_YVf0-VEs8GPtKC7Y2jP2bTRrZDs99EPlF7cMsNWQoUU-VqTuigV4985a31L-V1j9439l2GGsYhp7a6OQZYhz-Fzk0sDLAXQMYhECScK81cYGs8V_cN_HblN75PrgYWpYVhD5PZw=w2400" alt="Sughosh" style="width:80%"></a><br>
+      <a href="https://www.linkedin.com/in/sughoshkulkarni/" target="_blank"><img src="https://lh3.googleusercontent.com/kZ_YVf0-VEs8GPtKC7Y2jP2bTRrZDs99EPlF7cMsNWQoUU-VqTuigV4985a31L-V1j9439l2GGsYhp7a6OQZYhz-Fzk0sDLAXQMYhECScK81cYGs8V_cN_HblN75PrgYWpYVhD5PZw=w2400" alt="Sughosh" style="width:70%"></a><br>
 	<a href="https://www.linkedin.com/in/sughoshkulkarni/" style="color: white;font-size:115%;text-decoration:none;font-weight: bold;line-height: 25px;text-align:center;" target="_blank">Sughosh<br>Kulkarni</a><br>
   </div>
   <div class="column" align="center">
-     <a href="https://www.linkedin.com/in/vaishrk93/" target="_blank"><img src="https://lh3.googleusercontent.com/WF9jn3IKwtYnjqNNrWWwlrQptadO0WQ3Egg4DKFdJKDa6lNj5ehV7pW1Zz1lpZzCsuh3hQhZUjlwAh0oFDmnDRiWV-1lc__1VhK5fU87Dg-KeKt--VT6k13p6VzHkEud-cZZhInv8Q=w2400" alt="Vaishnav" style="width:77%"></a><br>
+     <a href="https://www.linkedin.com/in/vaishrk93/" target="_blank"><img src="https://lh3.googleusercontent.com/WF9jn3IKwtYnjqNNrWWwlrQptadO0WQ3Egg4DKFdJKDa6lNj5ehV7pW1Zz1lpZzCsuh3hQhZUjlwAh0oFDmnDRiWV-1lc__1VhK5fU87Dg-KeKt--VT6k13p6VzHkEud-cZZhInv8Q=w2400" alt="Vaishnav" style="width:67%"></a><br>
 	<a href="https://www.linkedin.com/in/vaishrk93" style="color: white;font-size:115%;text-decoration:none;font-weight: bold;line-height: 25px;text-align:center;" target="_blank">Vaishnav<br>Rathnakumar</a><br>
   </div>
 <br><br>
@@ -406,6 +428,7 @@ More about this project:
 </body>
  <div class="spacer"></div>
  <div id="noprint" class='no-print'>
+ <br>
  <footer class="footer" >
   <CENTER>
   <a href="{{ url_for('home')}}" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%; padding-bottom:10px">Home </a>  
