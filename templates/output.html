@@ -307,10 +307,15 @@ iframe{
 
 <body>
 <center>
+
 <div class="hero">
+
            <h1 style="color:white;font-size:2vw;font-family:Brush Script MT;">
-            <br>
-               <center><div id="noprint" class='no-print'> <a href="https://autoforecast.herokuapp.com/"><img src="https://lh3.googleusercontent.com/7lGzY8nolZYrMLg7r-l-VxGMaj5HDStusXemwDAn_70Kwprbmpxf40bJGLzzV7NU6IG1zCG1LgTZ_LyMhZf0NcNPaVJXEJspmGXAQCB9rIEgPZyqPtMEgV-7bhOH79B3gOZVejQa-g=w2400" alt="Wild-Wav-Logo-White" border="0" style="width:35%;min-width: 370px"></a> </div></center>
+            <p>
+           <div id="noprint" class='no-print'>
+           
+            </div>
+               <center><div id="noprint" class='no-print'> <a href="https://autoforecast.herokuapp.com/"><img src="https://lh3.googleusercontent.com/7lGzY8nolZYrMLg7r-l-VxGMaj5HDStusXemwDAn_70Kwprbmpxf40bJGLzzV7NU6IG1zCG1LgTZ_LyMhZf0NcNPaVJXEJspmGXAQCB9rIEgPZyqPtMEgV-7bhOH79B3gOZVejQa-g=w2400" alt="Auto-Forecasting-Logo-White" border="0" style="width:35%;min-width: 370px"></a> </div></center>
                 </h1>
   <div class="cube"></div>
   <div class="cube"></div>
@@ -319,7 +324,10 @@ iframe{
   <div class="cube"></div>
 
  <div style="width:70%;background-color: rgba(4, 43, 76, 0.3);border-radius: 40px;min-width: 300px;color:white;font-family:Helvetica;font-size:100%;padding-top:0px;padding-right:30px;padding-bottom:0px;padding-left:30px;" width="1024" height="500">
-<br><br><div id="noprint" class='no-print'>
+
+<br>
+<div id="noprint" class='no-print'>
+<br>
 
 <form action="{{ url_for('home')}}"method="post">
 <button type="submit" class="button button2">Refresh</button>
@@ -336,15 +344,17 @@ iframe{
 
 
 <center>
+<div id="noprint" class='no-print'>
 <br>
+</div>
 <img style="max-width:100%;max-height:100%;" src="data:image/png;base64, {{ plot_url }}">
-<br><p>
+<div id="noprint" class='no-print'><br></div>
 <img style="max-width:100%;max-height:100%;" src="data:image/png;base64, {{ plot_url2 }}">
 <br>
 </center>
 
 <center>
-<br>
+<div id="noprint" class='no-print'><br></div>
 {% with info = get_flashed_messages(category_filter=["info"]) %}
 {% if info %}
     {%- for msg in info %}
@@ -352,16 +362,20 @@ iframe{
     {% endfor -%}
 {% endif %}
 {% endwith %}
-<br><br>
-</center>
 
+</center>
+<div id="noprint" class='no-print'>
 <br>
+
+</div>
+
 <br>
 
 </center>
 </div>
-<br>
-
+<div id="noprint" class='no-print'>
+<p>
+</div>
 <script type="text/javascript">
 function download_pdf() {
          document.getElementById('downloaddiv').style.display = 'none';
@@ -378,7 +392,9 @@ function download_pdf() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
 
 </body>
+<div id="noprint" class='no-print'>
  <div class="spacer"></div>
+ </div>
  <div id="noprint" class='no-print'>
  <footer class="footer" >
   <CENTER>
