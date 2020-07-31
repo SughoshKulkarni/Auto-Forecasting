@@ -1,5 +1,5 @@
 import numpy as np
-from flask import Flask, request, render_template, flash, redirect, url_for
+from flask import Flask, request, render_template, flash, redirect, url_for, send_file
 import pandas as pd
 import warnings
 import itertools
@@ -38,6 +38,11 @@ def feedback():
 def request_internal_server_error(error):
     flash("Please ensure the Excel file has univariate time series data.", "error")
     return redirect(url_for("index"),500)
+
+@app.route('/downloads', methods=['GET', 'POST'])
+def downloads():
+    path = 'sample/Sample_template_for_AutoForecasting.xlsx'
+    return send_file(path, as_attachment=True)
 
 @app.route('/forecast',methods=['GET', 'POST'])
 def forecast():
