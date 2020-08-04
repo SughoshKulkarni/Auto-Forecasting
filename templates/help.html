@@ -297,59 +297,6 @@ iframe{
     overflow:hidden;
 }
 </style>
-<style>
-* {
-  box-sizing: none;
-}
-
-.column {
-  float: center;
-  width: 17.33%;
-  
-  padding: 10px;
-  margin: 0 auto;
-  display: inline-block
-  
-  
-}
-.arrow {
-  float: center;
-  width: 5.33%;
-  
-  padding: 0px;
-  margin: 0 auto;
-  display: inline-block
-  
-  
-}
-
-
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 1000px) {
-  .column {
-    width: 50%;
-  }
-}
-</style>
-<style>
-@media print
-{    
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
-}
-
-</style>
 </head>
 
 <body>
@@ -366,33 +313,7 @@ iframe{
   <div class="cube"></div>
 
  <div style="width:70%;background-color: rgba(4, 43, 76, 0.3);border-radius: 40px;min-width: 300px;color:white;font-family:Helvetica;font-size:100%;padding-top:0px;padding-right:30px;padding-bottom:30px;padding-left:30px;" width="1024" height="500">
-<br><br>
-<div class="row" align="center">
-  <div class="column" align="center">
-      <img src="https://lh3.googleusercontent.com/h7bEO_ytBL-eoMMnW_FtgnVa3MvqYGN8cQElaJLb9vR07u3_cxfE9XfXYrIfRWPYuiwLk3wX6Ik0DUkzz06YfN6aDJH_BCWyA1636thDHSTIVz40M3KA8P6Gf_bIl_Ur1qYItd8QlQ=w2400" alt="Excel file upload" style="width:59.1%;padding-right:20px;"><br>
-	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Upload<br>Excel File</p>
-  </div>
-  <div class="arrow" align="center">
-     <img src="https://lh3.googleusercontent.com/nDdwd6oTdooTB8t3aaaJZrdIghFxpUA85oEme-ssWBxHMBNOqr0Ds47Jq8ZMxZ9woJV6TLDMfqtAXoHFyRKhlftQ9a3XBc9JoezSMSqIW-1jwDbpq72MGzpXpmMrEI3O5WVuQ81A0w=w2400" alt="Forecasting model" style="width:30%"><br>
-	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px; padding:0px;"><br><br></p>
-  </div>
-    <div class="column" align="center">
-     <img src="https://lh3.googleusercontent.com/KFxLClhNvbZ6YD8mcgp-wejL3-jXV4jyas3bktWQ-sgRZCwysPVI5ipKquWioA_iCAwUDy6kbvivrGRj6867aZHmtT7tprZTozXaxAyfbqybsUqHuw6Kv0qcJ3wTcPyhco_93DPGDw=w2400" alt="Forecasting model" style="width:50%"><br>
-	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Automatic Model Selection<br></p>
-	 
-	 </div>
-	   <div class="arrow" align="center">
-     <img src="https://lh3.googleusercontent.com/nDdwd6oTdooTB8t3aaaJZrdIghFxpUA85oEme-ssWBxHMBNOqr0Ds47Jq8ZMxZ9woJV6TLDMfqtAXoHFyRKhlftQ9a3XBc9JoezSMSqIW-1jwDbpq72MGzpXpmMrEI3O5WVuQ81A0w=w2400" alt="Forecasting model" style="width:30%"><br>
-	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px; padding:0px;"><br><br></p>
-  </div>
-    <div class="column" align="center">
-	<img src="https://lh3.googleusercontent.com/IEGoYeoellhBMbhB_8eXQ0Rbqw9-kcSpHrLk5IVaDO408xP_jZFPH735IQYx05O6Ve6bZvGFs-v13MGus2-acNMCMeE45-xgBMMsku4RogrhfW9Fh-fY8SU74-RsWPlEpRIvQiIP2A=w2400" alt="Forecasts" style="width:50%"><br>
-	<p style="color: white;font-size:115%;text-decoration:none;font-weight: bold;text-align:center;margin: 10px">Generate<br>Forecasts</p>
-     
-  </div>
-
-<br><br>
-</div>
+<br><br><br>
 <div align="center">
 The web app has an interface with four steps:
 <ul style="padding-left:15px;">
@@ -407,31 +328,6 @@ By clicking on the forecast button, the model reads the excel file and converts 
 <br>
 The model works better if the data is monthly data or daily data and a total of at least 4-6 years of historical data.
   <br><br>
-  
-<a style="color:white;text-decoration:none;font-family:Helvetica;font-size:110%"><h3>FAQs</h3></a>
-
-<p style="font-size:100%;text-align:left;padding-left:0px;">
-
-Still have further queries? Some of the answers to these FAQs may help you clarify your doubts. If not, feel free to contact us via  <a href="mailto:svpp.projects@gmail.com" style="color:white;font-family:Helvetica;font-size:95%">email</a> or reach out to us using the <a href="{{ url_for('feedback')}}" style="color:white;font-family:Helvetica;font-size:95%">feedback form.</a></p>
-<p style="font-weight: bold;padding-bottom:0px;"></p>
-<ol style="padding-left:15px;">
-<li style="font-weight: bold;padding-bottom:0px;text-align:left;">What is time series forecasting?</li>
-<p style="padding-bottom:5px;text-align:left;margin-top:5px;padding-top:0px;">Time series forecasting is a machine learning technique that uses information regarding historical values and associated patterns to predict future activity. Most often, this relates to trend analysis, cyclical fluctuation analysis, and issues of seasonality.</p>
-
-<p style="font-weight: bold;padding-bottom:0px;"></p>
-<li style="font-weight: bold;padding-bottom:0px;text-align:left;">How much does it cost to Forecast?</li>
-<p style="padding-bottom:5px;text-align:left;margin-top:5px;padding-top:0px;">Generating forecasts on the Auto-Forecasting web application is free of cost. Should you wish to save the generated data, you may download or print the forecasts.</p>
-
-<p style="font-weight: bold;padding-bottom:0px;"></p>
-<li style="font-weight: bold;padding-bottom:0px;text-align:left;">Does my data get stored within the application?</li>
-<p style="padding-bottom:5px;text-align:left;margin-top:5px;padding-top:0px;">Auto-Forecasting is designed such that the user's data does not get stored on the server. After the forecasting process is complete, the uploaded data gets automatically deleted.</p>
-
-<p style="font-weight: bold;padding-bottom:0px;"></p>
-<li style="font-weight: bold;padding-bottom:0px;text-align:left;">The application is taking time to forecast. Why?</li>
-<p style="padding-bottom:5px;text-align:left;margin-top:5px;padding-top:0px;">The Auto-Forecasting application uses machine-learning to recognize and opt for the best model based on the data that is provided. This process takes time due to the high computational complexity. We are working on making the system more faster and effecient.</p>
-
-</ol>
-  
 </div>
 </center>
 <br>
@@ -439,9 +335,9 @@ Still have further queries? Some of the answers to these FAQs may help you clari
 </body>
 
 <div class="spacer"></div>
-<footer class="footer">
+<footer class="footer" >
   <CENTER>
-  <a href="{{ url_for('home')}}" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%; padding-bottom:10px">Home </a>  
+  <a href="{{ url_for('home')}}" style="color:white;text-decoration:none;"><img src="https://lh3.googleusercontent.com/WGk0ezk9zHu9b6sXQOi83dVSoWmm_YbozDXX3KTcqmvQU2VzldougJ7qKxCA8v0RfkKUaM4hCbgj8zERuHAL3LYLqPCQCx9tXQuOaozVg1ZWNzudLJAmiuSE0tjVhYWCSA2GQO-Ctw=w2400" alt="Auto-Forecasting-Footer" border="0" style="width:12%;min-width: 222px; padding-bottom:0px;" /> </a>
   <a href="{{ url_for('about')}}" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%; padding-bottom:10px">| About </a>
   <a href="{{ url_for('helps')}}" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%">| Help</a>
   <a href="mailto:svpp.projects@gmail.com" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%"> | Contact</a>
@@ -449,4 +345,5 @@ Still have further queries? Some of the answers to these FAQs may help you clari
   <a href="{{ url_for('privacy')}}" style="color:white;text-decoration:none;font-family:Helvetica;font-size:100%">| Privacy Policy</a>
   </CENTER>
 </footer>
+</div>
 </html>
