@@ -34,6 +34,10 @@ def privacy():
 def feedback():
     return render_template('feedback.html')
 
+@app.route('/sitemap.xml', methods=['GET', 'POST'])
+def sitemap():
+    return render_template('sitemap.xml')
+
 @app.errorhandler(500)
 def request_internal_server_error(error):
     flash("Please ensure the Excel file has univariate time series data.", "error")
