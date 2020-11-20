@@ -117,9 +117,6 @@ def forecast():
     column_names = ["lower Values", "Forecasts", "upper Values"]
     Final_results_df= Final_results_df.reindex(columns=column_names)
     Final_results_df = Final_results_df.round(2)
-    start_index = '2009-01-01'
-    end_index = '2019-05-01'
-    observed_predicted = results.predict(start=start_index, end=end_index)
     
     ######Preparation for Plots######
     img = BytesIO()
@@ -129,7 +126,6 @@ def forecast():
     
     ######First Plot######
     ax = y.plot(label='observed', figsize=(14, 7))
-    observed_predicted.plot(ax=ax, label = 'Fitted model')
     pred_uc.predicted_mean.plot(ax=ax, label='Forecast', title = 'Observed data and Forecasts')
     ax.fill_between(pred_ci.index,
                     pred_ci.iloc[:, 0],
