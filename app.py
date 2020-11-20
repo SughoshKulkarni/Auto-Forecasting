@@ -117,8 +117,8 @@ def forecast():
     column_names = ["lower Values", "Forecasts", "upper Values"]
     Final_results_df= Final_results_df.reindex(columns=column_names)
     Final_results_df = Final_results_df.round(2)
-    start_index = excel_file.index[0]
-    end_index = excel_file.index[-1]
+    start_index = '2009-01-01'
+    end_index = '2019-05-01'
     observed_predicted = results.predict(start=start_index, end=end_index)
     
     ######Preparation for Plots######
