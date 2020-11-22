@@ -76,7 +76,7 @@ def forecast():
         excel_file = excel_file.groupby('Date')['Values'].sum().reset_index()
         excel_file = excel_file.set_index('Date')
         y = excel_file['Values'].resample('MS').sum()
-    elif abc == 31.0 or abc == 30.0:
+    elif abc == 31.0 or abc == 30.0 or abc > 20.0:
         print('It is monthly data')
         excel_file = excel_file.set_index('Date')
         y = excel_file['Values'].resample('MS').mean()
