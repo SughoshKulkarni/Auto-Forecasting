@@ -7,8 +7,7 @@ This is a web application that takes in an excel file with univariate time serie
 
 ## Summary
 
-Auto-Forecasting is a name which I have given to the web application that I have built.
-For this project, we used Flask API to create the app and Python for modeling. The SARIMA model in this application can work with univariate time series. I was working on a building a forecasting model and always wanted to make the forecast easy and simple for people to get their forecasts in less number of steps and also ensuring less error. I took inspiration from [Amazon Forecast](https://aws.amazon.com/forecast/ "Amazon Forecast") and an article by [Susan Li](https://www.linkedin.com/in/susanli/ "Susan Li") on towardsdatascience.com website and link for that article is [here](https://towardsdatascience.com/an-end-to-end-project-on-time-series-analysis-and-forecasting-with-python-4835e6bf050b "Time Series Analysis and Forecasting with Python").
+For this project, I used Flask API to create the app and Python for modeling. The SARIMA model in this application can work with univariate time series. I was working on a building a forecasting model and always wanted to make the forecast easy and simple for people to get their forecasts in less number of steps and also ensuring less error. I took inspiration from [Amazon Forecast](https://aws.amazon.com/forecast/ "Amazon Forecast") and an article by [Susan Li](https://www.linkedin.com/in/susanli/ "Susan Li") on towardsdatascience.com website and link for that article is [here](https://towardsdatascience.com/an-end-to-end-project-on-time-series-analysis-and-forecasting-with-python-4835e6bf050b "Time Series Analysis and Forecasting with Python").
 
 ## Functionality
 The web app has an interface with three steps:
