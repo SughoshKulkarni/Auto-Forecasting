@@ -403,9 +403,9 @@ The web app has an interface with four steps:
 </ul>
 
 
-By clicking on the forecast button, the model reads the excel file and converts the dates into YYYY-MM-DD format if not in that format already. If the data is in a daily form, it will sum by grouping the values from the same month and takes an average of the month. The new information is run through a series of SARIMA models. The model with the best <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion" style="color: white" target="_blank">AIC</a> is chosen and will fit that model to the data, and generate the forecasts with the confidence intervals and display in a table format.
+Upon clicking the "forecast" button, the system shall retrieve the excel file and proceed to convert any dates that are not already in the YYYY-MM-DD format. In the event that the data is in a daily format, the system shall aggregate the values from the same month and compute their average. The resulting information shall then undergo a series of SARIMA models. The system shall select the model with the lowest Akaike Information Criterion (AIC) and apply said model to the data in order to generate forecasts along with their corresponding confidence intervals. The generated forecasts shall be presented in tabular format.
 <br>
-The model works better if the data is monthly data or daily data and a total of at least 4-6 years of historical data.
+It is worth noting that the model yields more accurate results when working with either monthly or daily data that spans at least 4-6 years of historical data.
   <br><br>
 </div>
 <a style="color:white;text-decoration:none;font-family:Helvetica;font-size:110%"><h3>FAQs</h3></a>
